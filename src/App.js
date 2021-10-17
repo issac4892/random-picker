@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import After from './components/after'
+import Before from './components/before'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    picknotdone: true,
+    arr: [],
+    num: 0,
+  }
+  onChange = async (number) => {
+    this.setState({
+      num: number
+    })
+  }
+  changeArr = async (array) => {
+    this.setState({
+      arr: array
+    })
+  }
+  done = async () => {
+    this.setState({
+      picknotdone: false
+    })
+  }
+  notDone = async () => {
+    this.setState({
+      picknotdone: true
+    })
+  }
+  render() {
+    const { picknotdone, arr, num } = this.state
+    return (
+        <div>
+          {picknotdone ? (
+              <Before change={this.onChange} changearr={this.changeArr} done={this.done}/>
+          ) : (
+              <After arr={arr} num={num} change={this.onChange} changearr={this.changeArr} done={this.notDone}/>
+          )}
+        </div>
+    )
+  }
 }
 
 export default App;

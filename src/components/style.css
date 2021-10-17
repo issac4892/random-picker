@@ -1,0 +1,50 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.App {
+    --primary-color: #030086;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark {
+    background: var(--primary-color);
+}
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    min-height: 24em;
+    justify-content: center;
+}
+
+.Aligner-item {
+    flex: 1;
+}
+
+.Aligner-item--top {
+    align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+    align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+    flex: none;
+    max-width: 50%;
+}
+
+.PickArea {
+    font-family: 'NanumGothic', sans-serif;
+    font-weight: 400;
+    font-size: xxx-large;
+}
+
+.Dark {
+    background-color: darkslateblue;
+    margin: 0;
+    padding: 0;
+}
