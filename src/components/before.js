@@ -48,7 +48,7 @@ class Before extends React.Component {
     render() {
         return (
             <Fragment>
-                <div>
+                <div className="Dark">
                     <div className="Aligner-item Aligner">
                         <input
                             type="number"

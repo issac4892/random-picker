@@ -42,3 +42,9 @@
     font-weight: 400;
     font-size: xxx-large;
 }
+
+.Dark {
+    background-color: darkslateblue;
+    margin: 0;
+    padding: 0;
+}
