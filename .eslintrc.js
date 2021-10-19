@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     "env": {
         "browser": true,
@@ -18,6 +19,8 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "eqeqeq": 0
+        "eqeqeq": 0,
+        "prop-types": 0,
+        "react/prop-types": 0
     }
 };
