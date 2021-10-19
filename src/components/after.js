@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import './style.css'
+import './modules/textion.js';
 
 import {ButtonTypes, ButtonSizes} from "./buttonTypes";
 
@@ -30,9 +31,9 @@ class After extends React.Component {
         const {currentIndex, hasStarted} = this.state
         return (
             <Fragment>
-                <div className="Dark">
+                <div>
                     <div className="Aligner" align="center">
-                        <div id="PickArea" className="Aligner-item PickArea">
+                        <div id="PickArea" className="Aligner-item PickArea textion">
                             {hasStarted ? (
                                 arr[currentIndex]
                             ) : (
