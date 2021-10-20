@@ -20,7 +20,7 @@ class After extends React.Component {
     pick = async () => {
         if (this.state.hasStarted === false) {
             this.setState({hasStarted: true})
-        } else if(this.state.currentIndex==this.props.num) {
+        } else if(this.state.currentIndex+1==this.props.num) {
             alert('종료! 처음으로 돌아갑니다')
             await this.onClick()
         } else {
